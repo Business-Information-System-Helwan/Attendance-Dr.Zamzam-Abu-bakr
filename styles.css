@@ -1,0 +1,287 @@
+/* Common styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url(BIS\ 2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-size: larger;
+  
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffffb9;
+  color: black;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-weight: bold;
+}
+
+/* Style for the form container */
+#attendanceFormSection {
+  background-color: #ffffffb9;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+  border: 3px solid #000000;
+  border-radius: 25Px;
+}
+
+/* Style for form labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Style for form inputs */
+input[type="text"] {
+  width: 85%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for the submit button */
+input[type="button"] {
+  background-color: #1b2b3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+input[type="button"]:hover {
+  background-color: #101a24;
+}
+
+/* Student Buttons and container */
+.student-section H2 {
+  text-align: center;
+}
+
+.student-section {
+  display: none;
+  background-color: #ffffffb9;
+  text-align: center;
+  height: 100%;
+  margin: 20px; /* Add margin around the student section */
+  padding: 20px; /* Add padding to the student section */
+  animation: fadeIn 1.5s ease-out; /* Fade-in animation for the student section */
+  border-radius: 25px;
+  overflow-y: auto;
+}
+.Day_Date{
+  font-weight: bold;
+}
+/* footer */
+footer {
+  background-color: #ffffffb9;
+  color: black;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px; /* Add margin at the top of the footer */
+  bottom: 0;
+  left: 0;
+  transform: translateY(100px);
+  animation: slideInFromLeft 1.5s ease-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: black;
+  margin-top: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer-section {
+  display: flex;
+  align-items: center;
+}
+
+.footer-section img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.footer-section a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 100px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.rotate-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fffffff1;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 9999; /* Make sure the message appears over all other elements */
+  display: block; /* Hide the message by default */
+  width: 90%;
+  height: 98%;
+  border-radius: 25px; 
+  overflow-y: auto;
+}
+
+.rotate-message button {
+  background-color: #1b2b3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.rotate-message button:hover {
+  background-color: #101a24;
+}
+.rotate-message button:disabled {
+  cursor: not-allowed;
+}
+
+.Notes{
+  direction: rtl;
+  text-align: right;
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  /* Navbar responsive */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10%;
+  }
+
+  .logo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  .logo span {
+    margin-top: 5px; /* Add margin between logos */
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .button {
+    margin: 5px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .time-widget {
+    display: flex;
+    align-items: center;
+  }
+
+  .student-section{
+    width: 90%;
+    padding: 10%;
+    align-items: center;
+    display: none;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+
+  .IMG{
+    width: 100%;
+    
+  }
+
+  /* footer responsive */
+  footer {
+    position: relative;
+    width: 100%;
+    padding: 10%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-section {
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .footer-section img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .rotate-message {
+    width: 85%;
+  }
+  
+}
